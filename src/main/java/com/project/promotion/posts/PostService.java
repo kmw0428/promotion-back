@@ -20,6 +20,10 @@ public class PostService {
         return postRepository.findById(id);
     }
 
+    public List<Post> findByBoardId(String boardId) {
+        return postRepository.findByBoardId(boardId);
+    }
+
     public Post save(Post post) {
         return postRepository.save(post);
     }

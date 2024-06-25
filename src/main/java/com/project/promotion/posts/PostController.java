@@ -29,6 +29,11 @@ public class PostController {
         }
     }
 
+    @GetMapping("/board/{boardId}")
+    public List<Post> getPostsByBoardId(@PathVariable String boardId) {
+        return postService.findByBoardId(boardId);
+    }
+
     @PostMapping
     public Post createPost(@RequestBody Post post) {
         return postService.save(post);
