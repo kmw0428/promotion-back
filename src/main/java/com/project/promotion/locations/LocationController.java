@@ -40,11 +40,7 @@ public class LocationController {
     }
 
     @PostMapping
-    public Location createLocation(@RequestParam("name") String name,
-                                   @RequestParam("description") String description) {
-        Location location = new Location();
-        location.setName(name);
-        location.setDescription(description);
+    public Location createLocation(@RequestBody Location location) {
         return locationService.save(location);
     }
 
