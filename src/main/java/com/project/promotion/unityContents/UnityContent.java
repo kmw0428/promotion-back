@@ -10,9 +10,6 @@ public class UnityContent {
     @Id
     private String id;
 
-    @DBRef
-    private Game game;
-
     private String name;
     private String description;
     private String url;
@@ -26,14 +23,6 @@ public class UnityContent {
 
     public void setId(String id) {
         this.id = id;
-    }
-
-    public Game getGame() {
-        return game;
-    }
-
-    public void setGame(Game game) {
-        this.game = game;
     }
 
     public String getName() {
